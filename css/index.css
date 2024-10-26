@@ -1,0 +1,134 @@
+    body {
+        background-color: #0D0D0D;
+        color: #f9f6f6 !important;
+        overflow: hidden;
+    }
+    .pointer{
+        cursor: pointer;
+    }
+
+    .navCont {
+        background-color: #0D0D0D;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .navLinks ul li {
+        font-size: 17px;
+        font-weight: 500;
+        position: relative;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+    .navLinks ul li:hover {
+        color: rgb(253, 204, 15);
+    }
+
+    .navLinks ul li::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: rgb(253, 204, 15);
+        transition: width 500ms;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+    }
+
+    .navLinks ul li:hover::after {
+        width: 50%;
+    }
+
+    i {
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    i:hover {
+        color: rgb(253, 204, 15);
+    }
+
+    .mealLayer {
+        width: 100%;
+        height: 100%;
+        background-color: #f9f6f6ca;
+        top: 100%;
+        transition: .5s;
+    }
+
+    .meal:hover .mealLayer {
+        top: 0;
+    }
+
+    .nav {
+        z-index: 99;
+        left: -260px;
+    }
+
+    .alert {
+        width: fit-content;
+    }
+
+    .loading-screen {
+        z-index: 999;
+        display: flex;
+    }
+
+    .loading {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: inline-block;
+        border-top: 4px solid #fff;
+        border-right: 4px solid transparent;
+        box-sizing: border-box;
+        animation: rotation 1.15s linear infinite;
+        position: relative;
+    }
+
+    .loading::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border-bottom: 4px solid rgb(244, 175, 0);
+        border-left: 4px solid transparent;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #submitBtn {
+        border: 1px solid #942731;
+        border-radius: 10px;
+        background: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        color: #942731;
+    }
+
+    #submitBtn:hover {
+        color: rgb(253, 204, 15);
+        border: 1px solid rgb(253, 204, 15);
+    }
+   
+    .form-control:focus {
+        border: 1px solid rgb(253, 204, 15) !important; /* Adjust the border width and color as needed */
+        outline: none; /* Remove default outline */
+    }
